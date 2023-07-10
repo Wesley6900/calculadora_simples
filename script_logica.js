@@ -1,20 +1,27 @@
 var receber_value_vetor;
 var resultado1;
+
 var receber_p_enviar = window.document.getElementById("textarea");
+
 var vetor_global_1 = [];
 var vetor_global_2 = [];
+
 var simb_indi = "";
 
 receber_p_enviar.innerHTML = null == receber_value_vetor ? "0" : receber_value_vetor;
 
 function apagar() {
-    for (reset(), i = 0; ; i++){
-        if (vetor_global_2.pop([i]), 0 == vetor_global_2.length){
+    for (var i = 0; ; i++){
+        vetor_global_2.pop([i]);
 
+        if (vetor_global_2.length === 0){
+            receber_value_vetor = 0;
+
+            reset();
+
+            receber_p_enviar.innerHTML = 0;
             break;
         }
-        receber_value_vetor = 0;
-        receber_p_enviar.innerHTML = 0;
     }
 }
 

@@ -111,31 +111,27 @@ function reset() {
 function calcular_resultado() {
     switch (simb_indi) {
       case "+":
-          resultado1 = Number.parseFloat(vetor_global_2[0]) + Number.parseFloat(receber_value_vetor);
-          receber_p_enviar.innerHTML =
-          vetor_global_2[0] + " + " + receber_value_vetor + " = " + Number.parseFloat(resultado1);
+            resultado1 = Number.parseFloat(vetor_global_2[0]) + Number.parseFloat(receber_value_vetor);
+            receber_p_enviar.innerHTML = vetor_global_2[0] + " + " + receber_value_vetor + " = " + Number.parseFloat(resultado1);
 
             break;
       case "/":
-          resultado1 = Number.parseFloat(vetor_global_2[0]) / Number.parseFloat(receber_value_vetor);
-          receber_p_enviar.innerHTML =
-          vetor_global_2[0] + " / " + receber_value_vetor + " = " + Number.parseFloat(resultado1);
+            resultado1 = Number.parseFloat(vetor_global_2[0]) / Number.parseFloat(receber_value_vetor);
+            receber_p_enviar.innerHTML = vetor_global_2[0] + " / " + receber_value_vetor + " = " + Number.parseFloat(resultado1);
+
 
             break;
       case "X":
-          resultado1 = Number.parseFloat(vetor_global_2[0]) * Number.parseFloat(receber_value_vetor);
-          receber_p_enviar.innerHTML =
-          vetor_global_2[0] + " x " + receber_value_vetor + " = " + Number.parseFloat(resultado1);
+            resultado1 = Number.parseFloat(vetor_global_2[0]) * Number.parseFloat(receber_value_vetor);
+            receber_p_enviar.innerHTML = vetor_global_2[0] + " x " + receber_value_vetor + " = " + Number.parseFloat(resultado1);
 
             break;
       case "-":
-          resultado1 = Number.parseFloat(vetor_global_2[0]) - Number.parseFloat(receber_value_vetor);
-          receber_p_enviar.innerHTML =
-          vetor_global_2[0] + " - " + receber_value_vetor + " = " + Number.parseFloat(resultado1);
-
+            resultado1 = Number.parseFloat(vetor_global_2[0]) - Number.parseFloat(receber_value_vetor);
+            receber_p_enviar.innerHTML = vetor_global_2[0] + " - " + receber_value_vetor + " = " + Number.parseFloat(resultado1);
+            
             break;
       default:
             window.document.alert("Digite um valor válido!!!");
     }
-    receber_value_vetor = resultado1;
 }

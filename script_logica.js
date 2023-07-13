@@ -1,24 +1,20 @@
 var receber_value_vetor;
-var resultado1;
-
 var receber_p_enviar = window.document.getElementById("textarea");
-
 var vetor_global_1 = [];
 var vetor_global_2 = [];
-
 var simb_indi = "";
 
-receber_p_enviar.innerHTML = null == receber_value_vetor ? "0" : receber_value_vetor;
+receber_p_enviar.innerHTML = receber_value_vetor == void(0) ? "0" : receber_value_vetor;
 
 function apagar() {
-    for (var i = 0; ; i++){
-        vetor_global_2.pop([i]);
+    for (let i = 0; ; i++){
+        vetor_global_2.pop([i])
 
-        if (vetor_global_2.length === 0){
+        receber_value_vetor = 0;
+        reset();
+
+        if (vetor_global_2.length == 0){
             receber_value_vetor = 0;
-
-            reset();
-
             receber_p_enviar.innerHTML = 0;
             break;
         }
@@ -31,11 +27,10 @@ function apagar_individual() {
             vetor_global_1.pop([a]);
             receber_value_vetor = vetor_global_1;
             receber_value_vetor = receber_value_vetor.join("");
-            receber_value_vetor = receber_value_vetor - receber_value_vetor - receber_value_vetor;
             receber_p_enviar.innerHTML = receber_value_vetor;
 
-            if (null == vetor_global_1[0]) {
-                receber_p_enviar.innerHTML = 0;
+            if (vetor_global_1[0] == null) {
+                receber_p_enviar.innerHTML = vetor_global_1[0];
             }
 
             break;
@@ -47,7 +42,7 @@ function apagar_individual() {
             receber_value_vetor = receber_value_vetor.join("");
             receber_p_enviar.innerHTML = receber_value_vetor;
 
-            if (null == vetor_global_1[0]) {
+            if (vetor_global_1[0] == null) {
                 receber_p_enviar.innerHTML = 0;
             }
             
@@ -104,8 +99,10 @@ function Primeiro_valor(a) {
 }
 
 function reset() {
-    for (i = 0; ; i++){
-        if (vetor_global_1.pop([i]), 0 == vetor_global_1.length){
+    for (let i = 0; ; i++){
+        vetor_global_1.pop([i])
+
+        if (vetor_global_1.length == 0){
             break;
         }
     }

@@ -1,4 +1,5 @@
 var receber_value_vetor;
+var resultado1;
 var receber_p_enviar = window.document.getElementById("textarea");
 var vetor_global_1 = [];
 var vetor_global_2 = [];
@@ -113,7 +114,6 @@ function calcular_resultado() {
       case "+":
             resultado1 = Number.parseFloat(vetor_global_2[0]) + Number.parseFloat(receber_value_vetor);
             receber_p_enviar.innerHTML = vetor_global_2[0] + " + " + receber_value_vetor + " = " + Number.parseFloat(resultado1);
-
             break;
       case "/":
             resultado1 = Number.parseFloat(vetor_global_2[0]) / Number.parseFloat(receber_value_vetor);
@@ -133,5 +133,12 @@ function calcular_resultado() {
             break;
       default:
             window.document.alert("Digite um valor válido!!!");
+    }
+
+    if (isNaN(resultado1)) {
+        apagar()
+        window.alert('Digite valores validos!!!')
+    }else{
+        vetor_global_2[0] = resultado1;
     }
 }
